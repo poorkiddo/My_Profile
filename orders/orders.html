@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+
+<html>
+    <head lang="en">
+        <title>Nani's Special Orders</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="../orders/style/style.css">
+        <meta name="description" content="Local bakery with home-baked sweets and pastries and drinks.">
+        <meta name="author" content="Anna Kozhushko">
+        <script src="https://kit.fontawesome.com/381733bb17.js" crossorigin="anonymous"></script>
+        <meta name="keyword" content="bakery, pastry, pastries, drinks, drinks, coffee, tea">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Arima:wght@100..700&family=Exo:ital,wght@0,100..900;1,100..900&family=Madimi+One&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <!--START SIDENAV-->
+        <div id="mySidenav" class="sidenav">
+            <a href="../index.html">Home</a>
+            <a href="../menu/menu.html">Menu</a>
+            <a href="../orders/orders.html">Special Orders</a>
+            <a href="..//about/about.html">About Us</a>
+            <a href="../contact/contact.html">Contacts</a>
+        </div>
+        <a href="../index.html"><img class="logo" src="../images/nani_white.png"></a> 
+        <div id="main">
+            <span style="cursor:pointer" onclick="toggleNav();">
+            <div class="container" onclick="myFunction(this)">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
+            </span><br><br><br><br><br><br><br><br><br>     
+        </div>
+        <script>
+        function toggleNav() {
+            var sidenav = document.getElementById("mySidenav"),
+            main = document.getElementById("main");
+            sidenav.style.width = sidenav.style.width == "250px" ? '0' : '250px';
+            main.style.marginLeft = main.style.marginLeft === "250px" ? '0' : '250px';
+        }
+        function myFunction(x) {
+            x.classList.toggle("change");
+        }
+          </script>
+        <!--END SIDENAV-->
+        <main>
+            <div class="order">             <!-- START TEXT ABOUT ORDERING -->
+                    <h1>Order a custom cake & baked goods - it's easy!</h1>
+                    <p>We are pleased to work with you to create distinctive sweet and savory offerings for your special events from birthdays to weddings.</p>
+                    <br>
+                    <h1>How it Works</h1>
+                    <ul>
+                        <li><h2>Place a request</h2><p>Fill out the form below with a description of the type of cake or baked goods you’d like created</p></li>
+                        <li><h2>We'll get back to you</h2><p>Once our bakers have a look at your request, they will price it out & take payment if you’re happy</p></li>
+                        <li><h2>Pick up your cake!</h2><p>When your cake is ready, collect in store to enjoy at home!</p></li>
+                    </ul>
+            </div>                          <!-- END TEXT ABOUT ORDERING -->
+            <div class="request">           <!-- START FORM REQUEST -->
+                <h1>Make a Custom Request</h1>
+                <form action="#">
+                    <input type="text" name="fullname" placeholder="Full Name:">
+                    <input type="text" name="email" placeholder="Email address:">
+                    <input type="text" name="phone" placeholder="Phone number:">
+                    <textarea name="description" rows="5" cols="10" placeholder="Describe your order:"></textarea>
+                    <input type="submit" value="Send Request">
+                      </form>
+                  <p>Data Protection Notice: The information you supply to Nani through this form will be held and used by us solely for the purpose of responding to your request and will not be retained for any other purpose.</p>
+            </div>                          <!-- END FORM REQUEST -->
+       </main>
+       <footer>
+            <h2 class="workhours">Work Hours</h2>           <!--WORKHOURS-->
+            <div class="wrapper">
+                <div class="float-left">
+                    <p>Monday - Friday:</p>
+                    <p>Saturday:</p>
+                    <p>Sunday:</p>
+                </div>
+                <img class="float-right" src="../images/nani_white.png" width="100" height="100">
+                <div class="float-left">
+                    <p>8:00 - 20:00</p>
+                    <p>9:00 - 21:00</p>
+                    <p>9:00 - 22:00</p>
+                </div>                                      <!--WORKHOURS-->
+                <div class="center">                        <!--ADDRESS AND LINKS-->
+                    <p>Clash Road, Kerry College, Tralee, V22RR33</p>
+                    <p><a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-square-facebook fa-2xl"></i></a> &nbsp; <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram fa-2xl"></i></a> &nbsp; <a href="https://twitter.com/" target="_blank"><i class="fa-brands fa-x-twitter fa-2xl"></i></i></a></p>
+                </div>                                      <!--ADDRESS AND LINKS-->
+            </div> 
+        </footer>
+    </body>
+</html>
