@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+
+<html>
+    <head lang="en">
+        <title>Nani's Brownie</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="../brownie/style/style.css">
+        <meta name="description" content="Local bakery with home-baked sweets and pastries and drinks.">
+        <meta name="author" content="Anna Kozhushko">
+        <script src="https://kit.fontawesome.com/381733bb17.js" crossorigin="anonymous"></script>
+        <meta name="keyword" content="bakery, pastry, pastries, drinks, drinks, coffee, tea">
+    </head>
+    <body>
+        <!--START SIDENAV-->
+        <div id="mySidenav" class="sidenav">
+            <a href="../../index.html">Home</a>
+            <a href="../../menu/menu.html">Menu</a>
+            <a href="../../orders/orders.html">Special Orders</a>
+            <a href="../../about/about.html">About Us</a>
+            <a href="../../contact/contact.html">Contacts</a>
+        </div>
+        <a href="../../index.html"><img class="logo" src="../../images/nani_white.png"></a> 
+        <div id="main">
+            <span style="cursor:pointer" onclick="toggleNav();">
+            <div class="container" onclick="myFunction(this)">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
+            </span><br><br><br><br><br><br><br><br><br>
+        </div>
+        <script>
+            function toggleNav() {
+                var sidenav = document.getElementById("mySidenav"),
+                main = document.getElementById("main");
+                sidenav.style.width = sidenav.style.width == "250px" ? '0' : '250px';
+                main.style.marginLeft = main.style.marginLeft === "250px" ? '0' : '250px';
+            }
+            function myFunction(x) {
+                x.classList.toggle("change");
+            }
+        </script>
+        <!--END SIDENAV-->
+        <main>
+            <div class="item">
+                <div class="slideshow-container">
+                    <div class="mySlides fade">
+                        <img src="brownie.jpg" width="500" height="600">
+                    </div>
+                    <div class="mySlides fade">
+                        <img src="1.jpg" width="500" height="600">
+                    </div>
+                    <div class="mySlides fade">
+                        <img src="2.jpg" width="500" height="600">
+                    </div>
+                    <a class="prev" onclick="plusSlides(-1)">&#x2B9C;</a>
+                    <a class="next" onclick="plusSlides(1)">&#x2B9E;</a>
+                </div>
+                <div class="descr">
+                    <h1>Double Chocolate Brownie (box of 4)</h1>
+                    <h3>from &#8364;8.00</h3>
+                    <hr>
+                    <p>A deeply rich, luxurious chocolate slice made with Belgian chocolate. One of our signature products.</p>
+                    <p>Double the chocolate, double the fun: our dense double-fudge brownies are made with dark cocoa powder <br> and chocolate chips, with a soft, chewy center and slightly crispy tops. </p>
+                    <hr>
+                </div>
+            </div>    
+            <script>
+                let slideIndex = 1;
+                showSlides(slideIndex);
+                
+                function plusSlides(n) {
+                    showSlides(slideIndex += n);
+                }
+                
+                function currentSlide(n) {
+                    showSlides(slideIndex = n);
+                }
+                
+                function showSlides(n) {
+                    let i;
+                    let slides = document.getElementsByClassName("mySlides");
+                    if (n > slides.length) {slideIndex = 1}    
+                    if (n < 1) {slideIndex = slides.length}
+                    for (i = 0; i < slides.length; i++) {
+                        slides[i].style.display = "none";  
+                    }
+                    slides[slideIndex-1].style.display = "block";  
+                }
+            </script>
+        </main>
+       <footer>
+            <h2 class="workhours">Work Hours</h2>           <!--WORKHOURS-->
+            <div class="wrapper">
+                <div class="float-left">
+                    <p>Monday - Friday:</p>
+                    <p>Saturday:</p>
+                    <p>Sunday:</p>
+                </div>
+                <img class="float-right" src="../../images/nani_white.png" width="100" height="100">
+                <div class="float-left">
+                    <p>8:00 - 20:00</p>
+                    <p>9:00 - 21:00</p>
+                    <p>9:00 - 22:00</p>
+                </div>                                      <!--WORKHOURS-->
+                <div class="center">                        <!--ADDRESS AND LINKS-->
+                    <p>Clash Road, Kerry College, Tralee, V22RR33</p>
+                    <p><a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-square-facebook fa-2xl"></i></a> &nbsp; <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram fa-2xl"></i></a> &nbsp; <a href="https://twitter.com/" target="_blank"><i class="fa-brands fa-x-twitter fa-2xl"></i></i></a></p>
+                </div>                                      <!--ADDRESS AND LINKS-->
+            </div> 
+        </footer>
+    </body>
+</html>
