@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+
+<html>
+    <head lang="en">
+        <title>Nani's Contacts</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="../contact/style/style.css">
+        <meta name="description" content="Local bakery with home-baked sweets and pastries and drinks.">
+        <meta name="author" content="Anna Kozhushko">
+        <script src="https://kit.fontawesome.com/381733bb17.js" crossorigin="anonymous"></script>
+        <meta name="keyword" content="bakery, pastry, pastries, drinks, drinks, coffee, tea">
+    </head>
+    <body>
+        <!--START SIDENAV-->
+        <div id="mySidenav" class="sidenav">
+            <a href="../index.html">Home</a>
+            <a href="../menu/menu.html">Menu</a>
+            <a href="../orders/orders.html">Special Orders</a>
+            <a href="../about/about.html">About Us</a>
+            <a href="../contact/contact.html">Contacts</a>
+        </div>
+        <a href="../index.html"><img class="logo" src="../images/nani_white.png"></a> 
+        <div id="main">
+            <span style="cursor:pointer" onclick="toggleNav();">
+            <div class="container" onclick="myFunction(this)">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
+            </span><br><br><br><br><br><br><br><br><br>
+        </div>
+        <script>
+            function toggleNav() {
+                var sidenav = document.getElementById("mySidenav"),
+                main = document.getElementById("main");
+                sidenav.style.width = sidenav.style.width == "250px" ? '0' : '250px';
+                main.style.marginLeft = main.style.marginLeft === "250px" ? '0' : '250px';
+            }
+            function myFunction(x) {
+                x.classList.toggle("change");
+            }
+        </script>
+        <!--END SIDENAV-->
+        <main>
+            <div class="request">               <!--FORM FEEDBACK-->
+                <h1>Get in Touch</h1>
+                <form action="#">
+                    <input type="text" name="fullname" placeholder="Full Name:">
+                    <input type="text" name="email" placeholder="Email address:">
+                    <input type="text" name="phone" placeholder="Phone number:">
+                    <label for="inquiry">What can we help you with?</label><br>
+                    <select class="inquiry" name="inquiry">
+                        <option value="general">General Info</option>
+                        <option value="special">Special Orders</option>
+                        <option value="business">Press, Business & Sponsorship</option>
+                    </select>
+                    <textarea name="description" rows="5" cols="10" placeholder="Describe your inquiry:"></textarea>
+                    <input type="submit" value="Send Request">
+                </form>
+                <p>Data Protection Notice: The information you supply to Nani through this form will be held and used by us solely for the purpose of responding to your request and will not be retained for any other purpose.</p>
+            </div>                          <!--FORM FEEDBACK-->
+            <div class="location">          <!--FIND US-->
+                <h1>Find Us</h1>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1185.9574175448272!2d-9.686608611948182!3d52.27212876378881!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48453572c7fe2259%3A0xa3172ba6d9213e7d!2sKerry%20College%20(Clash%20Road%20Campus)!5e0!3m2!1sen!2sie!4v1710240036610!5m2!1sen!2sie" width="600" height="300" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <h2>Contact Us</h2>
+                <p>Clash Road, Kerry College, Tralee, V22RR33</p>
+                <p>nani@gmail.com</p>
+                <p>0851112233</p>
+                <h2>Work Hours</h2>
+                <div class="float-left1">
+                    <p>Monday - Friday:</p>
+                    <p>Saturday:</p>
+                    <p>Sunday:</p>
+                </div>
+                <div class="float-left2">
+                    <p>8:00 - 20:00</p>
+                    <p>9:00 - 21:00</p>
+                    <p>9:00 - 22:00</p>
+                </div>
+            </div>                          <!--FIND US-->
+            <div class="email">             <!--NEWSLETTER-->
+                <h1>Join Our Newsletter to get all the latest offers, discounts & other benefits</h1>
+                <form action="#">
+                    <input type="text" name="email" placeholder="Email address:">
+                    <input type="submit" value="Submit">
+                </form>
+            </div>                          <!--NEWSLETTER-->
+        </main>
+       <footer>
+            <div class="wrapper">
+                <img class="float-right" src="../images/nani_white.png" width="100" height="100">
+                <div class="center">                <!--ADDRESS AND LINKS-->
+                    <p>Clash Road, Kerry College, Tralee, V22RR33</p>
+                    <p><a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-square-facebook fa-2xl"></i></a> &nbsp; <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram fa-2xl"></i></a> &nbsp; <a href="https://twitter.com/" target="_blank"><i class="fa-brands fa-x-twitter fa-2xl"></i></i></a></p>
+                </div>                               <!--ADDRESS AND LINKS-->
+            </div> 
+        </footer>
+    </body>
+</html>
